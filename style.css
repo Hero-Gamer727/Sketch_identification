@@ -1,0 +1,38 @@
+body{
+    background-color: lightgreen;
+}
+
+#Score{
+    float: left;
+    font-size: 35px;
+    margin-left: 50px;
+}
+
+#Timer{
+    float:right ;
+    font-size: 35px;
+    margin-right: 50px;
+
+}
+
+#show_sketch{
+    float: right;
+    margin-right: 25px;
+}
+
+h1{
+   margin-left: 100px;
+}
+
+#header{
+    background-color: lightblue;
+}
+
+p{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#sketch_name_tobedrawn{
+    color: red;
+}
