@@ -36,3 +36,7 @@ p{
 #sketch_name_tobedrawn{
     color: red;
 }
+
+canvas{
+    margin-top: 100px;
+}

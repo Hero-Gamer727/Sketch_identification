@@ -10,3 +10,48 @@ timer_check="";
 drawn_sketch="";
 answer_holder="";
 score=0;
+
+
+function update_canvas(){
+canvas.background("white");
+random_number=Math.floor((Math.random()*quick_draw_data_set.length)+1);
+Element_of_array= quick_draw_data_set[random_number];
+console.log(Element_of_array);
+document.getElementById("sketch_name_tobedrawn").innerHTML="Sketch To Be Drawn: "+Element_of_array;
+
+}
+
+
+
+
+function preload(){
+
+}
+
+function setup(){
+canvas = createCanvas(280,280);
+canvas.center()
+canvas.background("white");
+}
+
+function draw(){
+function check_sketch(){
+    timer_counter=timer_counter+1;
+    document.getElementById("Timer").innerHTML="Timer: "+timer_counter;
+    if(timer_counter>400){
+        timer_counter=0;
+        timer_check="completed";
+    }
+
+if(timer_check=="completed"||answer_holder=="set"){
+timer_check="";
+answer_holder="";
+update_canvas();
+}
+if(drawn_sketch == Element_of_array){
+    answer_holder="set";
+    score=score+1
+    document.getElementById("Score").innerHTML="Score: "+score;
+}
+}
+}
